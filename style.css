@@ -1,0 +1,38 @@
+*
+{
+    margin: 0px;
+}
+
+.main {
+    font-family: 'Lato', sans-serif;
+    background-image: url("/img/main2.jpg");
+    background-position:center;
+	background-repeat:no-repeat;
+    background-size:cover;
+    text-align: center;
+    font-size: 3em;
+    color: whitesmoke;
+    /* color: #d9b5c7; */
+    height: 100vh;
+}
+
+.text
+{
+    margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#secondaire
+{
+    font-size: 0.8em;
+    text-align: left;
+}
+.about 
+{
+    background-color: green;
+    height: 100vh;
+}

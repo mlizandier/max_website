@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MAX DESIGN</title>
+    <!-- LINKS -->
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- jquery -->
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="main" id='0'>
+        <div class="text">
+            <h1>MAXIME LIZANDIER</h1>
+            <div id="secondaire">
+                French computer science student. <br>
+                Amateur graphic designer.
+            </div>
+        </div>
+
+    </div>
+    <div class="about" id='1'>
+
+    </div>
+    <script>
+        var nb_sections = 0;
+        $.fn.scrollView = function () {
+            return this.each(function () {
+                $('html, body').animate({
+                    scrollTop: $(this).offset().top
+                }, 1000);
+            });
+        }
+        $(window).scroll(function (event) {
+            var scroll = $(window).scrollTop();
+            console.log(scroll)
+            console.log(this)
+        });
+    </script>    
+</body>
+</html>
