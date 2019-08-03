@@ -1,38 +1,51 @@
-*
+/* #homePage
 {
-    margin: 0px;
-}
-
-.main {
-    font-family: 'Lato', sans-serif;
-    background-image: url("/img/main2.jpg");
+    background-image: url("/img/main1.jpg");
     background-position:center;
 	background-repeat:no-repeat;
-    background-size:cover;
-    text-align: center;
-    font-size: 3em;
-    color: whitesmoke;
-    /* color: #d9b5c7; */
-    height: 100vh;
+    background-size:cover
+} */
+
+#name
+{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.5em;
+    color: hsl(240, 3%, 78%);
+    text-shadow: 2px 2px 10px hsl(240, 3%, 5%);
+    display: flex;
+    justify-content: center;
+    
 }
 
-.text
+#description
 {
-    margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2em;
+    color: hsl(240, 3%, 60%);
+    text-shadow: 2px 2px 10px hsl(240, 3%, 5%);
+    display: flex;
+    justify-content: center;
 }
 
-#secondaire
+#text
+{    
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    color: hsl(0, 0%, 90%);
+    text-shadow: 2px 2px 10px hsl(240, 3%, 5%);
+
+}
+
+#question
 {
-    font-size: 0.8em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    color: hsl(0, 0%, 98%);
+    text-shadow: 2px 2px 10px hsl(240, 3%, 5%);
     text-align: left;
-}
-.about 
-{
-    background-color: green;
-    height: 100vh;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
 }

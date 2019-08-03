@@ -6,43 +6,76 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MAX DESIGN</title>
     <!-- LINKS -->
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
     <!-- jquery -->
     <script
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
+    <!-- PagePiling -->
+    <link rel="stylesheet" type="text/css" href="/pagePiling/jquery.pagepiling.css" />
+    <script type="text/javascript" src="/pagePiling/jquery.pagepiling.js"></script>
+
 </head>
 <body>
-    <div class="main" id='0'>
-        <div class="text">
-            <h1>MAXIME LIZANDIER</h1>
-            <div id="secondaire">
-                French computer science student. <br>
-                Amateur graphic designer.
+    <div id="pagepiling">
+        <div class="section" id="homePage">
+            <div id="name">
+                <h1>MAXIME LIZANDIER</h1>
+            </div>
+            <div id="description">
+                <h4>Etudiant en 1ere année de cycle ingénieur à EPITA.</h4>
             </div>
         </div>
-
-    </div>
-    <div class="about" id='1'>
-
+        <div class="section">
+            <div id="question">
+                <h3>Qui suis-je ?</h3>
+            </div>
+            <div id="text">
+                Etudiant en 1ere année d'ingénieur en informatique à EPITA je touche à plusieurs technologies et langages de programmation.
+            </div>
+        </div>
+        <div class="section">
+            <div id="name">
+                <h1>WIP</h1>
+            </div>
+        </div>
     </div>
     <script>
-        var nb_sections = 0;
-        $.fn.scrollView = function () {
-            return this.each(function () {
-                $('html, body').animate({
-                    scrollTop: $(this).offset().top
-                }, 1000);
+        $(document).ready(function() {
+            $('#pagepiling').pagepiling({
+                menu: null,
+                direction: 'vertical',
+                verticalCentered: true,
+                anchors: ["home", "about-me", "projects"],
+                sectionsColor: ['#222224', '#f35b44', '#ffffff'],
+                scrollingSpeed: 700,
+                easing: 'linear',
+                loopBottom: false,
+                loopTop: false,
+                css3: true,
+                navigation: {
+                    'textColor': '#000',
+                    'bulletsColor': '#000',
+                    'position': 'right',
+                    'tooltips': ['section1', 'section2', 'section3', 'section4']
+                },
+                normalScrollElements: null,
+                normalScrollElementTouchThreshold: 5,
+                touchSensitivity: 5,
+                keyboardScrolling: true,
+                sectionSelector: '.section',
+                animateAnchor: false,
+
+                //events
+                onLeave: function(index, nextIndex, direction){},
+                afterLoad: function(anchorLink, index){},
+                afterRender: function(){},
+                });
+
             });
-        }
-        $(window).scroll(function (event) {
-            var scroll = $(window).scrollTop();
-            console.log(scroll)
-            console.log(this)
-        });
-    </script>    
+    </script>
 </body>
 </html>
