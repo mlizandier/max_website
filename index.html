@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MAX DESIGN</title>
     <!-- LINKS -->
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     
     <!-- jquery -->
@@ -29,15 +29,35 @@
                 <h4>Etudiant en 1ere année de cycle ingénieur à EPITA.</h4>
             </div>
         </div>
-        <div class="section">
+        <div class="section" id="aboutPage">
             <div id="question">
                 <h3>Qui suis-je ?</h3>
             </div>
             <div id="text">
                 Etudiant en 1ere année d'ingénieur en informatique à EPITA je touche à plusieurs technologies et langages de programmation.
+                <div id="tableau">
+                    <table style="width:100%">
+                        <tr>
+                            <th id="left">Langage</th>
+                            <th id="left">Période d'utilisation</th> 
+                            <th id="right">Maitrise</th>
+                        </tr>
+                        <tr>
+                            <td id="left">Jill</td>
+                            <td id="left">Smith</td> 
+                            <td id="right">50</td>
+                        </tr>
+                        <tr>
+                            <td id="left">Eve</td>
+                            <td id="left">Jackson</td> 
+                            <td id="right">94</td>
+                        </tr>
+                    </table>
+                </div>                
             </div>
+            
         </div>
-        <div class="section">
+        <div class="section" id="projectPage">
             <div id="name">
                 <h1>WIP</h1>
             </div>
@@ -50,7 +70,7 @@
                 direction: 'vertical',
                 verticalCentered: true,
                 anchors: ["home", "about-me", "projects"],
-                sectionsColor: ['#222224', '#f35b44', '#ffffff'],
+                sectionsColor: ['#0c2461', '#eb2f06', '#f8c291'],
                 scrollingSpeed: 700,
                 easing: 'linear',
                 loopBottom: false,
@@ -60,7 +80,7 @@
                     'textColor': '#000',
                     'bulletsColor': '#000',
                     'position': 'right',
-                    'tooltips': ['section1', 'section2', 'section3', 'section4']
+                    'tooltips': ['Home Page', 'About Me', 'Project Page']
                 },
                 normalScrollElements: null,
                 normalScrollElementTouchThreshold: 5,
