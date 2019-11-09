@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Maxime Lizandier</title>
     <!-- LINKS -->
-    <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     
     <!-- jquery -->
     <script
@@ -21,12 +21,18 @@
 </head>
 <body>
     <div id="pagepiling">
-        <div class="section" id="homePage">
+        <div class="section" id="homePage" class="home">
             <div id="name">
                 <h1>MAXIME LIZANDIER</h1>
             </div>
             <div id="description">
-                <h4>Etudiant en 1ere année de cycle ingénieur à EPITA.</h4>
+                <h4>3rd year student at <i>EPITA</i>, computer Science engineering school.</h4>
+            </div>
+            <div class="buttonContainer">
+                <div id="buttons">
+                    <button type="button" id="aboutButton">ABOUT ME</button>
+                    <button type="button" id="projectButton">MY PROJECTS</button>
+                </div>
             </div>
         </div>
         <div class="section" id="aboutPage">
@@ -42,33 +48,33 @@
                     <table style="width:100%">
                         <tr>
                             <th id="left">Langage</th>
-                            <th id="left">Période d'utilisation</th> 
+                            <th id="left">Période d'utilisation</th>
                             <th id="right">Maitrise</th>
                         </tr>
                         <tr>
                             <td id="left">HTML/CSS/JS</td>
-                            <td id="left">1 an</td> 
-                            <td id="right">★★★☆☆</td>
+                            <td id="left">2 ans</td> 
+                            <td id="right">● ● ● ○ ○</td>
                         </tr>
                         <tr>
                             <td id="left">C</td>
-                            <td id="left">1 an</td> 
-                            <td id="right">★★★☆☆</td>
-                        </tr>
-                        <tr>
-                            <td id="left">C#</td>
-                            <td id="left">1 an</td> 
-                            <td id="right">★★★☆☆</td>
+                            <td id="left">2 ans</td> 
+                            <td id="right">● ● ● ○ ○</td>
                         </tr>
                         <tr>
                             <td id="left">Java</td>
                             <td id="left">2 ans</td> 
-                            <td id="right">★★★☆☆</td>
+                            <td id="right">● ● ● ○ ○</td>
                         </tr>                        
                         <tr>
                             <td id="left">Python</td>
                             <td id="left">2 ans</td> 
-                            <td id="right">★★★☆☆</td>
+                            <td id="right">● ● ● ○ ○</td>
+                        </tr>
+                        <tr>
+                            <td id="left">LaTeX</td>
+                            <td id="left">1 an</td> 
+                            <td id="right">● ● ● ○ ○</td>
                         </tr>
                         
                     </table>
@@ -89,7 +95,6 @@
                 direction: 'vertical',
                 verticalCentered: true,
                 anchors: ["home", "about-me", "projects"],
-                sectionsColor: ['#0c2461', '#eb2f06', '#f8c291'],
                 scrollingSpeed: 700,
                 easing: 'linear',
                 loopBottom: false,
@@ -113,7 +118,16 @@
                 afterLoad: function(anchorLink, index){},
                 afterRender: function(){},
                 });
+                
+                $("#aboutButton").click(function() 
+                {
+                    $.fn.pagepiling.moveTo(2);
+                });
 
+                $("#projectButton").click(function() 
+                {
+                    $.fn.pagepiling.moveTo(3);
+                });
             });
     </script>
 </body>
