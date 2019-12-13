@@ -111,7 +111,7 @@ button:hover
     background-color: white;
 }
 
-@media all and (max-width: 375px)
+@media all and (max-width: 600px)
 {
     #name
     {
